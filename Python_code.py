@@ -84,3 +84,7 @@ def payment_model_two(distance: int):
     print('How far do you want to ride the scooter? The distance is always rounded up, for example "1.1" --> "2".')
     print('You entered ' + str(distance) + ' kilometers.')
     return float(distance) * 1.50
+
+# main() is executed at the end to ensure all functions (def) are defined
+if __name__ == "__main__":
+    main()
