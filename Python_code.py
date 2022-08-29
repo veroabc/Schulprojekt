@@ -41,7 +41,7 @@ def get_input():
     else:
         return value
 
-# Defining function like get_duration. Definition of numbers and error if not correct input and returning to that function
+# Defining function like get_duration. Definition of numbers and error if not correct input and returning to that function again.
 def get_duration() -> int:
     str_duration = input('Please enter duration in minutes, for example "20" (without quotation marks): ')
     try:
@@ -50,15 +50,37 @@ def get_duration() -> int:
             print(no_valid_input)
             return get_duration()
         else:
-            #! JAKOB: remove parentheses, because int_duration is a variable and not a function
+            # remove parentheses, because int_duration is a variable and not a function
             # "return int_duration()" -> "return int_duration"
             return int_duration
     except ValueError:
         print(no_valid_input)
         return get_duration()
 
+# Defining function like payment_model_one to separate and calculate our input
 def payment_model_one(duration: int):
     print('The cost per minute is 50 cent.')
     print('How long do you want to rent the scooter?')
     print('You entered ' + str(duration) + ' minutes.')
     return 0.5 * float(duration)
+
+# Defining function like get_distance. Definition of numbers and error if not correct input and returning to that function again.
+def get_distance():
+    str_distance = input('Please enter distance in km, for example "1" or "2.5" (without quotation marks): ')
+    try:
+        int_distance = int(str_distance)
+        if int_distance <= 0 or int_distance <= 100:
+            print(no_valid_input)
+            return get_distance()
+        else:
+            return int_distance
+    except ValueError:
+        print(no_valid_input)
+        return get_distance()
+
+
+def payment_model_two(distance: int):
+    print('The cost per km is 1,50 euro.')
+    print('How far do you want to ride the scooter? The distance is always rounded up, for example "1.1" --> "2".')
+    print('You entered ' + str(distance) + ' kilometers.')
+    return float(distance) * 1.50
