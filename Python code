@@ -1,0 +1,8 @@
+### In this pythonyé code we will create an application for calculating the fare for the rental operations.
+### Our goals are:
+* Application can calculate the fare of rented e-scooters according to usage time or usage distance.
+* Application is controlled via the console.
+* Users can make inputs via the console.
+* Outputs are returned via the console.
+* GUI is not required
+
