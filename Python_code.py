@@ -78,7 +78,7 @@ def get_distance():
         print(no_valid_input)
         return get_distance()
 
-
+# Defining function like payment_model_two to separate and calculate our input and output
 def payment_model_two(distance: int):
     print('The cost per km is 1,50 euro.')
     print('How far do you want to ride the scooter? The distance is always rounded up, for example "1.1" --> "2".')
